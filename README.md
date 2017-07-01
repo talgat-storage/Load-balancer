@@ -1,5 +1,33 @@
 # Load-balancer
 
+Ultimate Goal: Build a distributed key-value storage system
+
+High-level functions:
+- Store/retrieve data as a key-value pair
+- Handle bulk requests with I/O multiplexing and load balancing
+- Write logs and provide CLIs to interact with users
+
+Overall architecture
+- All components = processes
+
+• All components = processes
+Client #0         Client #1
+         \           /
+          \         /
+           \       /
+         Load balancer
+         /     |     \
+        /      |      \
+       /       |       \
+Handler #0  Handler #1 Handler #2
+
+Worker #0   Worker #1   Worker #2   Worker #3   Worker #4
+
+Operations
+- Request delivery to a specific handler according to a Round-robin strategy
+- Request delivery to a specific worker and response delivery to the load balancer
+- All handlers should eventually know all key-value distributions
+
 1. Run ./install.sh
 
 2. Go to the directory ./bin
