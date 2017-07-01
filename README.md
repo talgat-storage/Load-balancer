@@ -41,7 +41,7 @@ Operations
 6. Change the IP addresses of workers and ports as you wish.
    You can have as many workers as you wish.
 
-7. Open the info_handlers.tx
+7. Open the info_handlers.txt
 
 8. Change the IP addresses of handlers and ports as you wish.
    You can have as many handlers as you wish.
